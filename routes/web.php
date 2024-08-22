@@ -75,9 +75,9 @@ Route::middleware('auth')->group(function () {
         Route::get('stats', Admin/DashboardController::class);
 
     // End of the /admin Route Group
-    )};
+    });
 // End of the main Authenticated Route Group
-)};
+});
 // One more task is in routes/api.php
 
 require __DIR__.'/auth.php';
