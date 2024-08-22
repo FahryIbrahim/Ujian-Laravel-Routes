@@ -26,7 +26,7 @@ Route::get('/', [HomeController::class, 'index']);
 // Task 2: point the GET URL "/user/[name]" to the UserController method "show"
 // It doesn't use Route Model Binding, it expects $name as a parameter
 // Put one code line here below
-Route::get('/user/{name}', [UserController::class, 'show'])->name('user');
+Route::get('/user/{name}', [UserController::class, 'show']);
 
 // Task 3: point the GET URL "/about" to the view
 // resources/views/pages/about.blade.php - without any controller
@@ -78,7 +78,7 @@ Route::middleware('auth')->group(function () {
 
         // Task 11: point URL /admin/stats to a "Single Action" Admin/StatsController
         // Put one code line here below
-        Route::get('stats', AdminDashboardController::class);
+        Route::get('/stats', StatsController::class);
 
     // End of the /admin Route Group
     });
