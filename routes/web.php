@@ -78,7 +78,7 @@ Route::middleware('auth')->group(function () {
 
         // Task 11: point URL /admin/stats to a "Single Action" Admin/StatsController
         // Put one code line here below
-        Route::get('/stats', StatsController::class);
+        Route::get('/stats', Admin/StatsController::class);
 
     // End of the /admin Route Group
     });
